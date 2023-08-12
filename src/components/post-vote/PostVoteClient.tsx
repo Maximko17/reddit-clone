@@ -40,6 +40,7 @@ const PostVoteClient = ({
             postId: postId,
          };
 
+         throw new Error("sdsd");
          await axios.patch("/api/subreddit/post/vote", payload);
       },
       onError: (err, voteType) => {
