@@ -1,4 +1,4 @@
-// import CommentsSection from "@/components/CommentsSection";
+import CommentsSection from "@/components/CommentsSection";
 import EditorOutput from "@/components/EditorOutput";
 import PostVoteServer from "@/components/post-vote/PostVoteServer";
 import { buttonVariants } from "@/components/ui/Button";
@@ -80,7 +80,7 @@ const SubRedditPostPage = async ({ params }: SubRedditPostPageProps) => {
                   }
                >
                   {/* @ts-expect-error Server Component */}
-                  {/* <CommentsSection postId={post?.id ?? cachedPost.id} /> */}
+                  <CommentsSection postId={post?.id ?? cachedPost.id} />
                </Suspense>
             </div>
          </div>
