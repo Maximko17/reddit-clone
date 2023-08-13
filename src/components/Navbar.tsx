@@ -1,6 +1,7 @@
 import { getAuthSession } from "@/lib/auth";
 import Link from "next/link";
 import { Icons } from "./Icons";
+import Searchbar from "./Searchbar";
 import { buttonVariants } from "./ui/Button";
 import UserAccountNav from "./UserAccountNav";
 
@@ -16,6 +17,7 @@ async function Navbar() {
                </p>
             </Link>
 
+            <Searchbar />
             {session?.user ? (
                <UserAccountNav user={session?.user} />
             ) : (
